@@ -1,0 +1,637 @@
+CALL db.schema.visualization();
+
+MATCH (n {caption: 'Bryan'})
+RETURN n;
+
+/* Delete relationship between user Bryan and Series Pluribus */
+
+MATCH (u:User {caption: 'Bryan'})-[r:ACTED_IN]->(s:Series {caption: 'Pluribus'})
+DELETE r;
+
+MATCH (n {caption: 'Bryan'}), (m {caption: 'Shrek'}) MERGE (n)-[:WATCHED {caption: 'Bryan'}]->(m);
+
+MATCH (n {caption: 'Bryan'}), (m {caption: 'Police Story 2'}) MERGE (n)-[:WATCHED {caption: 'Bryan'}]->(m);
+
+MATCH (n {caption: 'Bryan'}), (m {caption: 'Afterlife'}) MERGE (n)-[:WATCHED {caption: 'Bryan'}]->(m);
+
+MATCH (n {caption: 'Bryan'})
+RETURN n;
+
+MATCH (n {caption: 'Bryan'}), (m {caption: 'Pluribus'}) MERGE (n)-[:WATCHED {caption: 'Bryan'}]->(m);
+
+MATCH (n {caption: 'Bryan'})
+RETURN n;
+
+MATCH (n {caption: 'Bryan'}), (m {caption: 'Pluribus'}) MERGE (n)-[:ACTED_IN {caption: 'Bryan'}]->(m);
+
+MATCH (n {caption: 'Bryan'})
+RETURN n;
+
+MATCH (n:User)
+RETURN n;
+
+/* Create User node with caption Bryan */
+
+CREATE (u:User {caption: 'Bryan'});
+
+/* Show all relationships */
+
+MATCH (n)-[r]->(m)
+RETURN n, r, m;
+
+MATCH (n)
+RETURN n;
+
+MATCH (s {id: 'n0'}), (t {id: 'n7'}) MERGE (s)-[:ACTED_IN {id: 'n0'}]->(t);
+MATCH (s {id: 'n0'}), (t {id: 'n6'}) MERGE (s)-[:ACTED_IN {id: 'n1'}]->(t);
+MATCH (s {id: 'n16'}), (t {id: 'n13'}) MERGE (s)-[:ACTED_IN {id: 'n2'}]->(t);
+MATCH (s {id: 'n16'}), (t {id: 'n14'}) MERGE (s)-[:ACTED_IN {id: 'n3'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n6'}) MERGE (s)-[:WATCHED {id: 'n4'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n7'}) MERGE (s)-[:WATCHED {id: 'n5'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n6'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n13'}) MERGE (s)-[:WATCHED {id: 'n7'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n10'}) MERGE (s)-[:WATCHED {id: 'n8'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n9'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n10'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n2'}) MERGE (s)-[:WATCHED {id: 'n11'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n8'}) MERGE (s)-[:WATCHED {id: 'n12'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n9'}) MERGE (s)-[:WATCHED {id: 'n13'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n14'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n17'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n13'}) MERGE (s)-[:WATCHED {id: 'n18'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n10'}) MERGE (s)-[:WATCHED {id: 'n19'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n20'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n21'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n8'}) MERGE (s)-[:WATCHED {id: 'n23'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n25'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n26'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n13'}) MERGE (s)-[:WATCHED {id: 'n27'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n29'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n30'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n8'}) MERGE (s)-[:WATCHED {id: 'n31'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n9'}) MERGE (s)-[:WATCHED {id: 'n32'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n34'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n13'}) MERGE (s)-[:WATCHED {id: 'n35'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n10'}) MERGE (s)-[:WATCHED {id: 'n36'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n38'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n41'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n42'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n45'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n46'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n8'}) MERGE (s)-[:WATCHED {id: 'n47'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n9'}) MERGE (s)-[:WATCHED {id: 'n48'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n49'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n50'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n53'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n54'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n8'}) MERGE (s)-[:WATCHED {id: 'n55'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n9'}) MERGE (s)-[:WATCHED {id: 'n56'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n57'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n13'}) MERGE (s)-[:WATCHED {id: 'n59'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n10'}) MERGE (s)-[:WATCHED {id: 'n60'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n61'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n62'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n65'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n14'}) MERGE (s)-[:WATCHED {id: 'n66'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n13'}) MERGE (s)-[:WATCHED {id: 'n67'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n10'}) MERGE (s)-[:WATCHED {id: 'n68'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n69'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n9'}) MERGE (s)-[:WATCHED {id: 'n72'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n10'}) MERGE (s)-[:WATCHED {id: 'n76'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n12'}) MERGE (s)-[:WATCHED {id: 'n77'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n15'}) MERGE (s)-[:WATCHED {id: 'n78'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n9'}) MERGE (s)-[:WATCHED {id: 'n80'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n11'}) MERGE (s)-[:WATCHED {id: 'n81'}]->(t);
+MATCH (s {id: 'n43'}), (t {id: 'n56'}) MERGE (s)-[:DIRECTED {id: 'n82'}]->(t);
+MATCH (s {id: 'n43'}), (t {id: 'n55'}) MERGE (s)-[:DIRECTED {id: 'n83'}]->(t);
+MATCH (s {id: 'n43'}), (t {id: 'n54'}) MERGE (s)-[:DIRECTED {id: 'n84'}]->(t);
+MATCH (s {id: 'n43'}), (t {id: 'n15'}) MERGE (s)-[:DIRECTED {id: 'n85'}]->(t);
+MATCH (s {id: 'n44'}), (t {id: 'n7'}) MERGE (s)-[:DIRECTED {id: 'n86'}]->(t);
+MATCH (s {id: 'n45'}), (t {id: 'n2'}) MERGE (s)-[:DIRECTED {id: 'n87'}]->(t);
+MATCH (s {id: 'n46'}), (t {id: 'n12'}) MERGE (s)-[:DIRECTED {id: 'n88'}]->(t);
+MATCH (s {id: 'n46'}), (t {id: 'n11'}) MERGE (s)-[:DIRECTED {id: 'n89'}]->(t);
+MATCH (s {id: 'n47'}), (t {id: 'n6'}) MERGE (s)-[:DIRECTED {id: 'n90'}]->(t);
+MATCH (s {id: 'n42'}), (t {id: 'n53'}) MERGE (s)-[:DIRECTED {id: 'n91'}]->(t);
+MATCH (s {id: 'n42'}), (t {id: 'n52'}) MERGE (s)-[:DIRECTED {id: 'n92'}]->(t);
+MATCH (s {id: 'n40'}), (t {id: 'n13'}) MERGE (s)-[:DIRECTED {id: 'n93'}]->(t);
+MATCH (s {id: 'n40'}), (t {id: 'n14'}) MERGE (s)-[:DIRECTED {id: 'n94'}]->(t);
+MATCH (s {id: 'n4'}), (t {id: 'n49'}) MERGE (s)-[:DIRECTED {id: 'n95'}]->(t);
+MATCH (s {id: 'n66'}), (t {id: 'n51'}) MERGE (s)-[:DIRECTED {id: 'n96'}]->(t);
+MATCH (s {id: 'n66'}), (t {id: 'n50'}) MERGE (s)-[:DIRECTED {id: 'n97'}]->(t);
+MATCH (s {id: 'n39'}), (t {id: 'n3'}) MERGE (s)-[:DIRECTED {id: 'n98'}]->(t);
+MATCH (s {id: 'n41'}), (t {id: 'n9'}) MERGE (s)-[:DIRECTED {id: 'n99'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n56'}) MERGE (s)-[:WATCHED {id: 'n100'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n55'}) MERGE (s)-[:WATCHED {id: 'n101'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n54'}) MERGE (s)-[:WATCHED {id: 'n102'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n53'}) MERGE (s)-[:WATCHED {id: 'n103'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n52'}) MERGE (s)-[:WATCHED {id: 'n104'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n49'}) MERGE (s)-[:WATCHED {id: 'n105'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n48'}) MERGE (s)-[:WATCHED {id: 'n106'}]->(t);
+MATCH (s {id: 'n1'}), (t {id: 'n3'}) MERGE (s)-[:WATCHED {id: 'n107'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n55'}) MERGE (s)-[:WATCHED {id: 'n108'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n53'}) MERGE (s)-[:WATCHED {id: 'n109'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n51'}) MERGE (s)-[:WATCHED {id: 'n110'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n50'}) MERGE (s)-[:WATCHED {id: 'n111'}]->(t);
+MATCH (s {id: 'n31'}), (t {id: 'n49'}) MERGE (s)-[:WATCHED {id: 'n112'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n54'}) MERGE (s)-[:WATCHED {id: 'n113'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n55'}) MERGE (s)-[:WATCHED {id: 'n114'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n50'}) MERGE (s)-[:WATCHED {id: 'n115'}]->(t);
+MATCH (s {id: 'n32'}), (t {id: 'n51'}) MERGE (s)-[:WATCHED {id: 'n116'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n3'}) MERGE (s)-[:WATCHED {id: 'n117'}]->(t);
+MATCH (s {id: 'n33'}), (t {id: 'n48'}) MERGE (s)-[:WATCHED {id: 'n118'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n49'}) MERGE (s)-[:WATCHED {id: 'n119'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n52'}) MERGE (s)-[:WATCHED {id: 'n120'}]->(t);
+MATCH (s {id: 'n34'}), (t {id: 'n53'}) MERGE (s)-[:WATCHED {id: 'n121'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n49'}) MERGE (s)-[:WATCHED {id: 'n122'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n51'}) MERGE (s)-[:WATCHED {id: 'n123'}]->(t);
+MATCH (s {id: 'n35'}), (t {id: 'n52'}) MERGE (s)-[:WATCHED {id: 'n124'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n3'}) MERGE (s)-[:WATCHED {id: 'n125'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n53'}) MERGE (s)-[:WATCHED {id: 'n126'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n54'}) MERGE (s)-[:WATCHED {id: 'n127'}]->(t);
+MATCH (s {id: 'n36'}), (t {id: 'n55'}) MERGE (s)-[:WATCHED {id: 'n128'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n48'}) MERGE (s)-[:WATCHED {id: 'n129'}]->(t);
+MATCH (s {id: 'n37'}), (t {id: 'n49'}) MERGE (s)-[:WATCHED {id: 'n130'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n51'}) MERGE (s)-[:WATCHED {id: 'n131'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n3'}) MERGE (s)-[:WATCHED {id: 'n132'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n53'}) MERGE (s)-[:WATCHED {id: 'n133'}]->(t);
+MATCH (s {id: 'n38'}), (t {id: 'n48'}) MERGE (s)-[:WATCHED {id: 'n134'}]->(t);
+MATCH (s {id: 'n18'}), (t {id: 'n9'}) MERGE (s)-[:ACTED_IN {id: 'n135'}]->(t);
+MATCH (s {id: 'n19'}), (t {id: 'n15'}) MERGE (s)-[:ACTED_IN {id: 'n136'}]->(t);
+MATCH (s {id: 'n19'}), (t {id: 'n55'}) MERGE (s)-[:ACTED_IN {id: 'n137'}]->(t);
+MATCH (s {id: 'n19'}), (t {id: 'n54'}) MERGE (s)-[:ACTED_IN {id: 'n138'}]->(t);
+MATCH (s {id: 'n20'}), (t {id: 'n55'}) MERGE (s)-[:ACTED_IN {id: 'n139'}]->(t);
+MATCH (s {id: 'n20'}), (t {id: 'n54'}) MERGE (s)-[:ACTED_IN {id: 'n140'}]->(t);
+MATCH (s {id: 'n20'}), (t {id: 'n15'}) MERGE (s)-[:ACTED_IN {id: 'n141'}]->(t);
+MATCH (s {id: 'n21'}), (t {id: 'n53'}) MERGE (s)-[:ACTED_IN {id: 'n142'}]->(t);
+MATCH (s {id: 'n21'}), (t {id: 'n52'}) MERGE (s)-[:ACTED_IN {id: 'n143'}]->(t);
+MATCH (s {id: 'n17'}), (t {id: 'n53'}) MERGE (s)-[:ACTED_IN {id: 'n144'}]->(t);
+MATCH (s {id: 'n17'}), (t {id: 'n52'}) MERGE (s)-[:ACTED_IN {id: 'n145'}]->(t);
+MATCH (s {id: 'n22'}), (t {id: 'n54'}) MERGE (s)-[:ACTED_IN {id: 'n146'}]->(t);
+MATCH (s {id: 'n22'}), (t {id: 'n56'}) MERGE (s)-[:ACTED_IN {id: 'n147'}]->(t);
+MATCH (s {id: 'n23'}), (t {id: 'n48'}) MERGE (s)-[:ACTED_IN {id: 'n148'}]->(t);
+MATCH (s {id: 'n30'}), (t {id: 'n12'}) MERGE (s)-[:ACTED_IN {id: 'n149'}]->(t);
+MATCH (s {id: 'n23'}), (t {id: 'n48'}) MERGE (s)-[r:DIRECTED {id: 'n150'}]->(t) SET r.`Directed 3 episodes` = '';
+MATCH (s {id: 'n30'}), (t {id: 'n11'}) MERGE (s)-[:ACTED_IN {id: 'n151'}]->(t);
+MATCH (s {id: 'n29'}), (t {id: 'n49'}) MERGE (s)-[:ACTED_IN {id: 'n152'}]->(t);
+MATCH (s {id: 'n39'}), (t {id: 'n3'}) MERGE (s)-[r:ACTED_IN {id: 'n153'}]->(t) SET r.`Main role character` = '';
+MATCH (s {id: 'n28'}), (t {id: 'n51'}) MERGE (s)-[:ACTED_IN {id: 'n154'}]->(t);
+MATCH (s {id: 'n27'}), (t {id: 'n50'}) MERGE (s)-[:ACTED_IN {id: 'n155'}]->(t);
+MATCH (s {id: 'n26'}), (t {id: 'n2'}) MERGE (s)-[:ACTED_IN {id: 'n156'}]->(t);
+MATCH (s {id: 'n25'}), (t {id: 'n10'}) MERGE (s)-[:ACTED_IN {id: 'n157'}]->(t);
+MATCH (s {id: 'n24'}), (t {id: 'n8'}) MERGE (s)-[:ACTED_IN {id: 'n158'}]->(t);
+MATCH (s {id: 'n9'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n159'}]->(t);
+MATCH (s {id: 'n3'}), (t {id: 'n57'}) MERGE (s)-[:IN_GENRE {id: 'n160'}]->(t);
+MATCH (s {id: 'n48'}), (t {id: 'n57'}) MERGE (s)-[:IN_GENRE {id: 'n161'}]->(t);
+MATCH (s {id: 'n3'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n162'}]->(t);
+MATCH (s {id: 'n56'}), (t {id: 'n59'}) MERGE (s)-[:IN_GENRE {id: 'n163'}]->(t);
+MATCH (s {id: 'n49'}), (t {id: 'n64'}) MERGE (s)-[:IN_GENRE {id: 'n164'}]->(t);
+MATCH (s {id: 'n50'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n165'}]->(t);
+MATCH (s {id: 'n51'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n166'}]->(t);
+MATCH (s {id: 'n52'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n167'}]->(t);
+MATCH (s {id: 'n52'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n168'}]->(t);
+MATCH (s {id: 'n53'}), (t {id: 'n61'}) MERGE (s)-[:IN_GENRE {id: 'n169'}]->(t);
+MATCH (s {id: 'n53'}), (t {id: 'n65'}) MERGE (s)-[:IN_GENRE {id: 'n170'}]->(t);
+MATCH (s {id: 'n53'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n171'}]->(t);
+MATCH (s {id: 'n54'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n172'}]->(t);
+MATCH (s {id: 'n55'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n173'}]->(t);
+MATCH (s {id: 'n56'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n174'}]->(t);
+MATCH (s {id: 'n7'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n175'}]->(t);
+MATCH (s {id: 'n6'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n176'}]->(t);
+MATCH (s {id: 'n6'}), (t {id: 'n59'}) MERGE (s)-[:IN_GENRE {id: 'n177'}]->(t);
+MATCH (s {id: 'n13'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n178'}]->(t);
+MATCH (s {id: 'n13'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n179'}]->(t);
+MATCH (s {id: 'n9'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n180'}]->(t);
+MATCH (s {id: 'n8'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n181'}]->(t);
+MATCH (s {id: 'n10'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n182'}]->(t);
+MATCH (s {id: 'n10'}), (t {id: 'n57'}) MERGE (s)-[:IN_GENRE {id: 'n183'}]->(t);
+MATCH (s {id: 'n14'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n184'}]->(t);
+MATCH (s {id: 'n14'}), (t {id: 'n57'}) MERGE (s)-[:IN_GENRE {id: 'n185'}]->(t);
+MATCH (s {id: 'n14'}), (t {id: 'n62'}) MERGE (s)-[:IN_GENRE {id: 'n186'}]->(t);
+MATCH (s {id: 'n2'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n187'}]->(t);
+MATCH (s {id: 'n2'}), (t {id: 'n63'}) MERGE (s)-[:IN_GENRE {id: 'n188'}]->(t);
+MATCH (s {id: 'n12'}), (t {id: 'n5'}) MERGE (s)-[:IN_GENRE {id: 'n189'}]->(t);
+MATCH (s {id: 'n12'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n190'}]->(t);
+MATCH (s {id: 'n12'}), (t {id: 'n63'}) MERGE (s)-[:IN_GENRE {id: 'n191'}]->(t);
+MATCH (s {id: 'n11'}), (t {id: 'n64'}) MERGE (s)-[:IN_GENRE {id: 'n192'}]->(t);
+MATCH (s {id: 'n49'}), (t {id: 'n60'}) MERGE (s)-[r:IN_GENRE {id: 'n193'}]->(t) SET r.`Based on true story` = '';
+MATCH (s {id: 'n15'}), (t {id: 'n58'}) MERGE (s)-[:IN_GENRE {id: 'n194'}]->(t);
+
+:param relData => [
+  { from: "n0", to: "n7", type: "ACTED_IN", relId: "n0", props: {} },
+  { from: "n0", to: "n6", type: "ACTED_IN", relId: "n1", props: {} },
+  { from: "n16", to: "n13", type: "ACTED_IN", relId: "n2", props: {} },
+  { from: "n16", to: "n14", type: "ACTED_IN", relId: "n3", props: {} },
+  { from: "n1", to: "n6", type: "WATCHED", relId: "n4", props: {} },
+  { from: "n1", to: "n7", type: "WATCHED", relId: "n5", props: {} },
+  { from: "n1", to: "n14", type: "WATCHED", relId: "n6", props: {} },
+  { from: "n1", to: "n13", type: "WATCHED", relId: "n7", props: {} },
+  { from: "n1", to: "n10", type: "WATCHED", relId: "n8", props: {} },
+  { from: "n1", to: "n12", type: "WATCHED", relId: "n9", props: {} },
+  { from: "n1", to: "n15", type: "WATCHED", relId: "n10", props: {} },
+  { from: "n1", to: "n2", type: "WATCHED", relId: "n11", props: {} },
+  { from: "n1", to: "n8", type: "WATCHED", relId: "n12", props: {} },
+  { from: "n1", to: "n9", type: "WATCHED", relId: "n13", props: {} },
+  { from: "n1", to: "n11", type: "WATCHED", relId: "n14", props: {} },
+  { from: "n31", to: "n14", type: "WATCHED", relId: "n17", props: {} },
+  { from: "n31", to: "n13", type: "WATCHED", relId: "n18", props: {} },
+  { from: "n31", to: "n10", type: "WATCHED", relId: "n19", props: {} },
+  { from: "n31", to: "n12", type: "WATCHED", relId: "n20", props: {} },
+  { from: "n31", to: "n15", type: "WATCHED", relId: "n21", props: {} },
+  { from: "n31", to: "n8", type: "WATCHED", relId: "n23", props: {} },
+  { from: "n31", to: "n11", type: "WATCHED", relId: "n25", props: {} },
+  { from: "n32", to: "n14", type: "WATCHED", relId: "n26", props: {} },
+  { from: "n32", to: "n13", type: "WATCHED", relId: "n27", props: {} },
+  { from: "n32", to: "n12", type: "WATCHED", relId: "n29", props: {} },
+  { from: "n32", to: "n15", type: "WATCHED", relId: "n30", props: {} },
+  { from: "n32", to: "n8", type: "WATCHED", relId: "n31", props: {} },
+  { from: "n32", to: "n9", type: "WATCHED", relId: "n32", props: {} },
+  { from: "n33", to: "n14", type: "WATCHED", relId: "n34", props: {} },
+  { from: "n33", to: "n13", type: "WATCHED", relId: "n35", props: {} },
+  { from: "n33", to: "n10", type: "WATCHED", relId: "n36", props: {} },
+  { from: "n33", to: "n15", type: "WATCHED", relId: "n38", props: {} },
+  { from: "n33", to: "n11", type: "WATCHED", relId: "n41", props: {} },
+  { from: "n34", to: "n14", type: "WATCHED", relId: "n42", props: {} },
+  { from: "n34", to: "n12", type: "WATCHED", relId: "n45", props: {} },
+  { from: "n34", to: "n15", type: "WATCHED", relId: "n46", props: {} },
+  { from: "n34", to: "n8", type: "WATCHED", relId: "n47", props: {} },
+  { from: "n34", to: "n9", type: "WATCHED", relId: "n48", props: {} },
+  { from: "n34", to: "n11", type: "WATCHED", relId: "n49", props: {} },
+  { from: "n35", to: "n14", type: "WATCHED", relId: "n50", props: {} },
+  { from: "n35", to: "n12", type: "WATCHED", relId: "n53", props: {} },
+  { from: "n35", to: "n15", type: "WATCHED", relId: "n54", props: {} },
+  { from: "n35", to: "n8", type: "WATCHED", relId: "n55", props: {} },
+  { from: "n35", to: "n9", type: "WATCHED", relId: "n56", props: {} },
+  { from: "n35", to: "n11", type: "WATCHED", relId: "n57", props: {} },
+  { from: "n36", to: "n13", type: "WATCHED", relId: "n59", props: {} },
+  { from: "n36", to: "n10", type: "WATCHED", relId: "n60", props: {} },
+  { from: "n36", to: "n12", type: "WATCHED", relId: "n61", props: {} },
+  { from: "n36", to: "n15", type: "WATCHED", relId: "n62", props: {} },
+  { from: "n36", to: "n11", type: "WATCHED", relId: "n65", props: {} },
+  { from: "n37", to: "n14", type: "WATCHED", relId: "n66", props: {} },
+  { from: "n37", to: "n13", type: "WATCHED", relId: "n67", props: {} },
+  { from: "n37", to: "n10", type: "WATCHED", relId: "n68", props: {} },
+  { from: "n37", to: "n12", type: "WATCHED", relId: "n69", props: {} },
+  { from: "n37", to: "n9", type: "WATCHED", relId: "n72", props: {} },
+  { from: "n38", to: "n10", type: "WATCHED", relId: "n76", props: {} },
+  { from: "n38", to: "n12", type: "WATCHED", relId: "n77", props: {} },
+  { from: "n38", to: "n15", type: "WATCHED", relId: "n78", props: {} },
+  { from: "n38", to: "n9", type: "WATCHED", relId: "n80", props: {} },
+  { from: "n38", to: "n11", type: "WATCHED", relId: "n81", props: {} },
+  { from: "n43", to: "n56", type: "DIRECTED", relId: "n82", props: {} },
+  { from: "n43", to: "n55", type: "DIRECTED", relId: "n83", props: {} },
+  { from: "n43", to: "n54", type: "DIRECTED", relId: "n84", props: {} },
+  { from: "n43", to: "n15", type: "DIRECTED", relId: "n85", props: {} },
+  { from: "n44", to: "n7", type: "DIRECTED", relId: "n86", props: {} },
+  { from: "n45", to: "n2", type: "DIRECTED", relId: "n87", props: {} },
+  { from: "n46", to: "n12", type: "DIRECTED", relId: "n88", props: {} },
+  { from: "n46", to: "n11", type: "DIRECTED", relId: "n89", props: {} },
+  { from: "n47", to: "n6", type: "DIRECTED", relId: "n90", props: {} },
+  { from: "n42", to: "n53", type: "DIRECTED", relId: "n91", props: {} },
+  { from: "n42", to: "n52", type: "DIRECTED", relId: "n92", props: {} },
+  { from: "n40", to: "n13", type: "DIRECTED", relId: "n93", props: {} },
+  { from: "n40", to: "n14", type: "DIRECTED", relId: "n94", props: {} },
+  { from: "n4", to: "n49", type: "DIRECTED", relId: "n95", props: {} },
+  { from: "n66", to: "n51", type: "DIRECTED", relId: "n96", props: {} },
+  { from: "n66", to: "n50", type: "DIRECTED", relId: "n97", props: {} },
+  { from: "n39", to: "n3", type: "DIRECTED", relId: "n98", props: {} },
+  { from: "n41", to: "n9", type: "DIRECTED", relId: "n99", props: {} },
+  { from: "n1", to: "n56", type: "WATCHED", relId: "n100", props: {} },
+  { from: "n1", to: "n55", type: "WATCHED", relId: "n101", props: {} },
+  { from: "n1", to: "n54", type: "WATCHED", relId: "n102", props: {} },
+  { from: "n1", to: "n53", type: "WATCHED", relId: "n103", props: {} },
+  { from: "n1", to: "n52", type: "WATCHED", relId: "n104", props: {} },
+  { from: "n1", to: "n49", "type": "WATCHED", relId: "n105", props: {} },
+  { from: "n1", to: "n48", "type": "WATCHED", relId: "n106", props: {} },
+  { from: "n1", to: "n3", "type": "WATCHED", relId: "n107", props: {} },
+  { from: "n31", to: "n55", type: "WATCHED", relId: "n108", props: {} },
+  { from: "n31", to: "n53", type: "WATCHED", relId: "n109", props: {} },
+  { from: "n31", to: "n51", type: "WATCHED", relId: "n110", props: {} },
+  { from: "n31", to: "n50", type: "WATCHED", relId: "n111", props: {} },
+  { from: "n31", to: "n49", type: "WATCHED", relId: "n112", props: {} },
+  { from: "n32", to: "n54", type: "WATCHED", relId: "n113", props: {} },
+  { from: "n32", to: "n55", type: "WATCHED", relId: "n114", props: {} },
+  { from: "n32", to: "n50", type: "WATCHED", relId: "n115", props: {} },
+  { from: "n32", to: "n51", type: "WATCHED", relId: "n116", props: {} },
+  { from: "n33", to: "n3", type: "WATCHED", relId: "n117", props: {} },
+  { from: "n33", to: "n48", type: "WATCHED", relId: "n118", props: {} },
+  { from: "n34", to: "n49", type: "WATCHED", relId: "n119", props: {} },
+  { from: "n34", to: "n52", type: "WATCHED", relId: "n120", props: {} },
+  { from: "n34", to: "n53", type: "WATCHED", relId: "n121", props: {} },
+  { from: "n35", to: "n49", type: "WATCHED", relId: "n122", props: {} },
+  { from: "n35", to: "n51", type: "WATCHED", relId: "n123", props: {} },
+  { from: "n35", to: "n52", type: "WATCHED", relId: "n124", props: {} },
+  { from: "n36", to: "n3", type: "WATCHED", relId: "n125", props: {} },
+  { from: "n36", to: "n53", type: "WATCHED", relId: "n126", props: {} },
+  { from: "n36", to: "n54", type: "WATCHED", relId: "n127", props: {} },
+  { from: "n36", to: "n55", type: "WATCHED", relId: "n128", props: {} },
+  { from: "n37", to: "n48", type: "WATCHED", relId: "n129", props: {} },
+  { from: "n37", to: "n49", type: "WATCHED", relId: "n130", props: {} },
+  { from: "n38", to: "n51", type: "WATCHED", relId: "n131", props: {} },
+  { from: "n38", to: "n3", type: "WATCHED", relId: "n132", props: {} },
+  { from: "n38", to: "n53", type: "WATCHED", relId: "n133", props: {} },
+  { from: "n38", to: "n48", type: "WATCHED", relId: "n134", props: {} },
+  { from: "n18", to: "n9", type: "ACTED_IN", relId: "n135", props: {} },
+  { from: "n19", to: "n15", type: "ACTED_IN", relId: "n136", props: {} },
+  { from: "n19", to: "n55", type: "ACTED_IN", relId: "n137", props: {} },
+  { from: "n19", to: "n54", type: "ACTED_IN", relId: "n138", props: {} },
+  { from: "n20", to: "n55", type: "ACTED_IN", relId: "n139", props: {} },
+  { from: "n20", to: "n54", type: "ACTED_IN", relId: "n140", props: {} },
+  { from: "n20", to: "n15", type: "ACTED_IN", relId: "n141", props: {} },
+  { from: "n21", to: "n53", type: "ACTED_IN", relId: "n142", props: {} },
+  { from: "n21", to: "n52", type: "ACTED_IN", relId: "n143", props: {} },
+  { from: "n17", to: "n53", type: "ACTED_IN", relId: "n144", props: {} },
+  { from: "n17", to: "n52", type: "ACTED_IN", relId: "n145", props: {} },
+  { from: "n22", to: "n54", type: "ACTED_IN", relId: "n146", props: {} },
+  { from: "n22", to: "n56", type: "ACTED_IN", relId: "n147", props: {} },
+  { from: "n23", to: "n48", type: "ACTED_IN", relId: "n148", props: {} },
+  { from: "n30", to: "n12", type: "ACTED_IN", relId: "n149", props: {} },
+  { from: "n23", to: "n48", type: "DIRECTED", relId: "n150", props: {`Directed 3 episodes`: ""} },
+  { from: "n30", to: "n11", type: "ACTED_IN", relId: "n151", props: {} },
+  { from: "n29", to: "n49", type: "ACTED_IN", relId: "n152", props: {} },
+  { from: "n39", to: "n3", type: "ACTED_IN", relId: "n153", props: {`Main role character`: ""} },
+  { from: "n28", to: "n51", type: "ACTED_IN", relId: "n154", props: {} },
+  { from: "n27", to: "n50", type: "ACTED_IN", relId: "n155", props: {} },
+  { from: "n26", to: "n2", type: "ACTED_IN", relId: "n156", props: {} },
+  { from: "n25", to: "n10", type: "ACTED_IN", relId: "n157", props: {} },
+  { from: "n24", to: "n8", type: "ACTED_IN", relId: "n158", props: {} },
+  { from: "n9", to: "n5", type: "IN_GENRE", relId: "n159", props: {} },
+  { from: "n3", to: "n57", type: "IN_GENRE", relId: "n160", props: {} },
+  { from: "n48", to: "n57", type: "IN_GENRE", relId: "n161", props: {} },
+  { from: "n3", to: "n58", type: "IN_GENRE", relId: "n162", props: {} },
+  { from: "n56", to: "n59", type: "IN_GENRE", relId: "n163", props: {} },
+  { from: "n49", to: "n64", type: "IN_GENRE", relId: "n164", props: {} },
+  { from: "n50", to: "n58", type: "IN_GENRE", relId: "n165", props: {} },
+  { from: "n51", to: "n58", type: "IN_GENRE", relId: "n166", props: {} },
+  { from: "n52", to: "n62", type: "IN_GENRE", relId: "n167", props: {} },
+  { from: "n52", to: "n5", type: "IN_GENRE", relId: "n168", props: {} },
+  { from: "n53", to: "n61", type: "IN_GENRE", relId: "n169", props: {} },
+  { from: "n53", to: "n65", type: "IN_GENRE", relId: "n170", props: {} },
+  { from: "n53", to: "n62", type: "IN_GENRE", relId: "n171", props: {} },
+  { from: "n54", to: "n58", type: "IN_GENRE", relId: "n172", props: {} },
+  { from: "n55", to: "n58", type: "IN_GENRE", relId: "n173", props: {} },
+  { from: "n56", to: "n58", type: "IN_GENRE", relId: "n174", props: {} },
+  { from: "n7", to: "n62", type: "IN_GENRE", relId: "n175", props: {} },
+  { from: "n6", to: "n5", type: "IN_GENRE", relId: "n176", props: {} },
+  { from: "n6", to: "n59", type: "IN_GENRE", relId: "n177", props: {} },
+  { from: "n13", to: "n5", type: "IN_GENRE", relId: "n178", props: {} },
+  { from: "n13", to: "n62", type: "IN_GENRE", relId: "n179", props: {} },
+  { from: "n9", to: "n5", type: "IN_GENRE", relId: "n180", props: {} },
+  { from: "n8", to: "n62", type: "IN_GENRE", relId: "n181", props: {} },
+  { from: "n10", to: "n62", type: "IN_GENRE", relId: "n182", props: {} },
+  { from: "n10", to: "n57", type: "IN_GENRE", relId: "n183", props: {} },
+  { from: "n14", to: "n5", type: "IN_GENRE", relId: "n184", props: {} },
+  { from: "n14", to: "n57", type: "IN_GENRE", relId: "n185", props: {} },
+  { from: "n14", to: "n62", type: "IN_GENRE", relId: "n186", props: {} },
+  { from: "n2", to: "n58", type: "IN_GENRE", relId: "n187", props: {} },
+  { from: "n2", to: "n63", type: "IN_GENRE", relId: "n188", props: {} },
+  { from: "n12", to: "n5", type: "IN_GENRE", relId: "n189", props: {} },
+  { from: "n12", to: "n58", type: "IN_GENRE", relId: "n190", props: {} },
+  { from: "n12", to: "n63", type: "IN_GENRE", relId: "n191", props: {} },
+  { from: "n11", to: "n64", type: "IN_GENRE", relId: "n192", props: {} },
+  { from: "n49", to: "n60", type: "IN_GENRE", relId: "n193", props: {`Based on true story`: ""} },
+  { from: "n15", to: "n58", type: "IN_GENRE", relId: "n194", props: {} }
+]
+
+:param relData => [
+  { "from": "n0", "to": "n7", "type": "ACTED_IN", "relId": "n0", "props": {} },
+  { "from": "n0", "to": "n6", "type": "ACTED_IN", "relId": "n1", "props": {} },
+  { "from": "n16", "to": "n13", "type": "ACTED_IN", "relId": "n2", "props": {} },
+  { "from": "n16", "to": "n14", "type": "ACTED_IN", "relId": "n3", "props": {} },
+  { "from": "n1", "to": "n6", "type": "WATCHED", "relId": "n4", "props": {} },
+  { "from": "n1", "to": "n7", "type": "WATCHED", "relId": "n5", "props": {} },
+  { "from": "n1", "to": "n14", "type": "WATCHED", "relId": "n6", "props": {} },
+  { "from": "n1", "to": "n13", "type": "WATCHED", "relId": "n7", "props": {} },
+  { "from": "n1", "to": "n10", "type": "WATCHED", "relId": "n8", "props": {} },
+  { "from": "n1", "to": "n12", "type": "WATCHED", "relId": "n9", "props": {} },
+  { "from": "n1", "to": "n15", "type": "WATCHED", "relId": "n10", "props": {} },
+  { "from": "n1", "to": "n2", "type": "WATCHED", "relId": "n11", "props": {} },
+  { "from": "n1", "to": "n8", "type": "WATCHED", "relId": "n12", "props": {} },
+  { "from": "n1", "to": "n9", "type": "WATCHED", "relId": "n13", "props": {} },
+  { "from": "n1", "to": "n11", "type": "WATCHED", "relId": "n14", "props": {} },
+  { "from": "n31", "to": "n14", "type": "WATCHED", "relId": "n17", "props": {} },
+  { "from": "n31", "to": "n13", "type": "WATCHED", "relId": "n18", "props": {} },
+  { "from": "n31", "to": "n10", "type": "WATCHED", "relId": "n19", "props": {} },
+  { "from": "n31", "to": "n12", "type": "WATCHED", "relId": "n20", "props": {} },
+  { "from": "n31", "to": "n15", "type": "WATCHED", "relId": "n21", "props": {} },
+  { "from": "n31", "to": "n8", "type": "WATCHED", "relId": "n23", "props": {} },
+  { "from": "n31", "to": "n11", "type": "WATCHED", "relId": "n25", "props": {} },
+  { "from": "n32", "to": "n14", "type": "WATCHED", "relId": "n26", "props": {} },
+  { "from": "n32", "to": "n13", "type": "WATCHED", "relId": "n27", "props": {} },
+  { "from": "n32", "to": "n12", "type": "WATCHED", "relId": "n29", "props": {} },
+  { "from": "n32", "to": "n15", "type": "WATCHED", "relId": "n30", "props": {} },
+  { "from": "n32", "to": "n8", "type": "WATCHED", "relId": "n31", "props": {} },
+  { "from": "n32", "to": "n9", "type": "WATCHED", "relId": "n32", "props": {} },
+  { "from": "n33", "to": "n14", "type": "WATCHED", "relId": "n34", "props": {} },
+  { "from": "n33", "to": "n13", "type": "WATCHED", "relId": "n35", "props": {} },
+  { "from": "n33", "to": "n10", "type": "WATCHED", "relId": "n36", "props": {} },
+  { "from": "n33", "to": "n15", "type": "WATCHED", "relId": "n38", "props": {} },
+  { "from": "n33", "to": "n11", "type": "WATCHED", "relId": "n41", "props": {} },
+  { "from": "n34", "to": "n14", "type": "WATCHED", "relId": "n42", "props": {} },
+  { "from": "n34", "to": "n12", "type": "WATCHED", "relId": "n45", "props": {} },
+  { "from": "n34", "to": "n15", "type": "WATCHED", "relId": "n46", "props": {} },
+  { "from": "n34", "to": "n8", "type": "WATCHED", "relId": "n47", "props": {} },
+  { "from": "n34", "to": "n9", "type": "WATCHED", "relId": "n48", "props": {} },
+  { "from": "n34", "to": "n11", "type": "WATCHED", "relId": "n49", "props": {} },
+  { "from": "n35", "to": "n14", "type": "WATCHED", "relId": "n50", "props": {} },
+  { "from": "n35", "to": "n12", "type": "WATCHED", "relId": "n53", "props": {} },
+  { "from": "n35", "to": "n15", "type": "WATCHED", "relId": "n54", "props": {} },
+  { "from": "n35", "to": "n8", "type": "WATCHED", "relId": "n55", "props": {} },
+  { "from": "n35", "to": "n9", "type": "WATCHED", "relId": "n56", "props": {} },
+  { "from": "n35", "to": "n11", "type": "WATCHED", "relId": "n57", "props": {} },
+  { "from": "n36", "to": "n13", "type": "WATCHED", "relId": "n59", "props": {} },
+  { "from": "n36", "to": "n10", "type": "WATCHED", "relId": "n60", "props": {} },
+  { "from": "n36", "to": "n12", "type": "WATCHED", "relId": "n61", "props": {} },
+  { "from": "n36", "to": "n15", "type": "WATCHED", "relId": "n62", "props": {} },
+  { "from": "n36", "to": "n11", "type": "WATCHED", "relId": "n65", "props": {} },
+  { "from": "n37", "to": "n14", "type": "WATCHED", "relId": "n66", "props": {} },
+  { "from": "n37", "to": "n13", "type": "WATCHED", "relId": "n67", "props": {} },
+  { "from": "n37", "to": "n10", "type": "WATCHED", "relId": "n68", "props": {} },
+  { "from": "n37", "to": "n12", "type": "WATCHED", "relId": "n69", "props": {} },
+  { "from": "n37", "to": "n9", "type": "WATCHED", "relId": "n72", "props": {} },
+  { "from": "n38", "to": "n10", "type": "WATCHED", "relId": "n76", "props": {} },
+  { "from": "n38", "to": "n12", "type": "WATCHED", "relId": "n77", "props": {} },
+  { "from": "n38", "to": "n15", "type": "WATCHED", "relId": "n78", "props": {} },
+  { "from": "n38", "to": "n9", "type": "WATCHED", "relId": "n80", "props": {} },
+  { "from": "n38", "to": "n11", "type": "WATCHED", "relId": "n81", "props": {} },
+  { "from": "n43", "to": "n56", "type": "DIRECTED", "relId": "n82", "props": {} },
+  { "from": "n43", "to": "n55", "type": "DIRECTED", "relId": "n83", "props": {} },
+  { "from": "n43", "to": "n54", "type": "DIRECTED", "relId": "n84", "props": {} },
+  { "from": "n43", "to": "n15", "type": "DIRECTED", "relId": "n85", "props": {} },
+  { "from": "n44", "to": "n7", "type": "DIRECTED", "relId": "n86", "props": {} },
+  { "from": "n45", "to": "n2", "type": "DIRECTED", "relId": "n87", "props": {} },
+  { "from": "n46", "to": "n12", "type": "DIRECTED", "relId": "n88", "props": {} },
+  { "from": "n46", "to": "n11", "type": "DIRECTED", "relId": "n89", "props": {} },
+  { "from": "n47", "to": "n6", "type": "DIRECTED", "relId": "n90", "props": {} },
+  { "from": "n42", "to": "n53", "type": "DIRECTED", "relId": "n91", "props": {} },
+  { "from": "n42", "to": "n52", "type": "DIRECTED", "relId": "n92", "props": {} },
+  { "from": "n40", "to": "n13", "type": "DIRECTED", "relId": "n93", "props": {} },
+  { "from": "n40", "to": "n14", "type": "DIRECTED", "relId": "n94", "props": {} },
+  { "from": "n4", "to": "n49", "type": "DIRECTED", "relId": "n95", "props": {} },
+  { "from": "n66", "to": "n51", "type": "DIRECTED", "relId": "n96", "props": {} },
+  { "from": "n66", "to": "n50", "type": "DIRECTED", "relId": "n97", "props": {} },
+  { "from": "n39", "to": "n3", "type": "DIRECTED", "relId": "n98", "props": {} },
+  { "from": "n41", "to": "n9", "type": "DIRECTED", "relId": "n99", "props": {} },
+  { "from": "n1", "to": "n56", "type": "WATCHED", "relId": "n100", "props": {} },
+  { "from": "n1", "to": "n55", "type": "WATCHED", "relId": "n101", "props": {} },
+  { "from": "n1", "to": "n54", "type": "WATCHED", "relId": "n102", "props": {} },
+  { "from": "n1", "to": "n53", "type": "WATCHED", "relId": "n103", "props": {} },
+  { "from": "n1", "to": "n52", "type": "WATCHED", "relId": "n104", "props": {} },
+  { "from": "n1", "to": "n49", "type": "WATCHED", "relId": "n105", "props": {} },
+  { "from": "n1", "to": "n48", "type": "WATCHED", "relId": "n106", "props": {} },
+  { "from": "n1", "to": "n3", "type": "WATCHED", "relId": "n107", "props": {} },
+  { "from": "n31", "to": "n55", "type": "WATCHED", "relId": "n108", "props": {} },
+  { "from": "n31", "to": "n53", "type": "WATCHED", "relId": "n109", "props": {} },
+  { "from": "n31", "to": "n51", "type": "WATCHED", "relId": "n110", "props": {} },
+  { "from": "n31", "to": "n50", "type": "WATCHED", "relId": "n111", "props": {} },
+  { "from": "n31", "to": "n49", "type": "WATCHED", "relId": "n112", "props": {} },
+  { "from": "n32", "to": "n54", "type": "WATCHED", "relId": "n113", "props": {} },
+  { "from": "n32", "to": "n55", "type": "WATCHED", "relId": "n114", "props": {} },
+  { "from": "n32", "to": "n50", "type": "WATCHED", "relId": "n115", "props": {} },
+  { "from": "n32", "to": "n51", "type": "WATCHED", "relId": "n116", "props": {} },
+  { "from": "n33", "to": "n3", "type": "WATCHED", "relId": "n117", "props": {} },
+  { "from": "n33", "to": "n48", "type": "WATCHED", "relId": "n118", "props": {} },
+  { "from": "n34", "to": "n49", "type": "WATCHED", "relId": "n119", "props": {} },
+  { "from": "n34", "to": "n52", "type": "WATCHED", "relId": "n120", "props": {} },
+  { "from": "n34", "to": "n53", "type": "WATCHED", "relId": "n121", "props": {} },
+  { "from": "n35", "to": "n49", "type": "WATCHED", "relId": "n122", "props": {} },
+  { "from": "n35", "to": "n51", "type": "WATCHED", "relId": "n123", "props": {} },
+  { "from": "n35", "to": "n52", "type": "WATCHED", "relId": "n124", "props": {} },
+  { "from": "n36", "to": "n3", "type": "WATCHED", "relId": "n125", "props": {} },
+  { "from": "n36", "to": "n53", "type": "WATCHED", "relId": "n126", "props": {} },
+  { "from": "n36", "to": "n54", "type": "WATCHED", "relId": "n127", "props": {} },
+  { "from": "n36", "to": "n55", "type": "WATCHED", "relId": "n128", "props": {} },
+  { "from": "n37", "to": "n48", "type": "WATCHED", "relId": "n129", "props": {} },
+  { "from": "n37", "to": "n49", "type": "WATCHED", "relId": "n130", "props": {} },
+  { "from": "n38", "to": "n51", "type": "WATCHED", "relId": "n131", "props": {} },
+  { "from": "n38", "to": "n3", "type": "WATCHED", "relId": "n132", "props": {} },
+  { "from": "n38", "to": "n53", "type": "WATCHED", "relId": "n133", "props": {} },
+  { "from": "n38", "to": "n48", "type": "WATCHED", "relId": "n134", "props": {} },
+  { "from": "n18", "to": "n9", "type": "ACTED_IN", "relId": "n135", "props": {} },
+  { "from": "n19", "to": "n15", "type": "ACTED_IN", "relId": "n136", "props": {} },
+  { "from": "n19", "to": "n55", "type": "ACTED_IN", "relId": "n137", "props": {} },
+  { "from": "n19", "to": "n54", "type": "ACTED_IN", "relId": "n138", "props": {} },
+  { "from": "n20", "to": "n55", "type": "ACTED_IN", "relId": "n139", "props": {} },
+  { "from": "n20", "to": "n54", "type": "ACTED_IN", "relId": "n140", "props": {} },
+  { "from": "n20", "to": "n15", "type": "ACTED_IN", "relId": "n141", "props": {} },
+  { "from": "n21", "to": "n53", "type": "ACTED_IN", "relId": "n142", "props": {} },
+  { "from": "n21", "to": "n52", "type": "ACTED_IN", "relId": "n143", "props": {} },
+  { "from": "n17", "to": "n53", "type": "ACTED_IN", "relId": "n144", "props": {} },
+  { "from": "n17", "to": "n52", "type": "ACTED_IN", "relId": "n145", "props": {} },
+  { "from": "n22", "to": "n54", "type": "ACTED_IN", "relId": "n146", "props": {} },
+  { "from": "n22", "to": "n56", "type": "ACTED_IN", "relId": "n147", "props": {} },
+  { "from": "n23", "to": "n48", "type": "ACTED_IN", "relId": "n148", "props": {} },
+  { "from": "n30", "to": "n12", "type": "ACTED_IN", "relId": "n149", "props": {} },
+  { "from": "n23", "to": "n48", "type": "DIRECTED", "relId": "n150", "props": {"Directed 3 episodes": ""} },
+  { "from": "n30", "to": "n11", "type": "ACTED_IN", "relId": "n151", "props": {} },
+  { "from": "n29", "to": "n49", "type": "ACTED_IN", "relId": "n152", "props": {} },
+  { "from": "n39", "to": "n3", "type": "ACTED_IN", "relId": "n153", "props": {"Main role character": ""} },
+  { "from": "n28", "to": "n51", "type": "ACTED_IN", "relId": "n154", "props": {} },
+  { "from": "n27", "to": "n50", "type": "ACTED_IN", "relId": "n155", "props": {} },
+  { "from": "n26", "to": "n2", "type": "ACTED_IN", "relId": "n156", "props": {} },
+  { "from": "n25", "to": "n10", "type": "ACTED_IN", "relId": "n157", "props": {} },
+  { "from": "n24", "to": "n8", "type": "ACTED_IN", "relId": "n158", "props": {} },
+  { "from": "n9", "to": "n5", "type": "IN_GENRE", "relId": "n159", "props": {} },
+  { "from": "n3", "to": "n57", "type": "IN_GENRE", "relId": "n160", "props": {} },
+  { "from": "n48", "to": "n57", "type": "IN_GENRE", "relId": "n161", "props": {} },
+  { "from": "n3", "to": "n58", "type": "IN_GENRE", "relId": "n162", "props": {} },
+  { "from": "n56", "to": "n59", "type": "IN_GENRE", "relId": "n163", "props": {} },
+  { "from": "n49", "to": "n64", "type": "IN_GENRE", "relId": "n164", "props": {} },
+  { "from": "n50", "to": "n58", "type": "IN_GENRE", "relId": "n165", "props": {} },
+  { "from": "n51", "to": "n58", "type": "IN_GENRE", "relId": "n166", "props": {} },
+  { "from": "n52", "to": "n62", "type": "IN_GENRE", "relId": "n167", "props": {} },
+  { "from": "n52", "to": "n5", "type": "IN_GENRE", "relId": "n168", "props": {} },
+  { "from": "n53", "to": "n61", "type": "IN_GENRE", "relId": "n169", "props": {} },
+  { "from": "n53", "to": "n65", "type": "IN_GENRE", "relId": "n170", "props": {} },
+  { "from": "n53", "to": "n62", "type": "IN_GENRE", "relId": "n171", "props": {} },
+  { "from": "n54", "to": "n58", "type": "IN_GENRE", "relId": "n172", "props": {} },
+  { "from": "n55", "to": "n58", "type": "IN_GENRE", "relId": "n173", "props": {} },
+  { "from": "n56", "to": "n58", "type": "IN_GENRE", "relId": "n174", "props": {} },
+  { "from": "n7", "to": "n62", "type": "IN_GENRE", "relId": "n175", "props": {} },
+  { "from": "n6", "to": "n5", "type": "IN_GENRE", "relId": "n176", "props": {} },
+  { "from": "n6", "to": "n59", "type": "IN_GENRE", "relId": "n177", "props": {} },
+  { "from": "n13", "to": "n5", "type": "IN_GENRE", "relId": "n178", "props": {} },
+  { "from": "n13", "to": "n62", "type": "IN_GENRE", "relId": "n179", "props": {} },
+  { "from": "n9", "to": "n5", "type": "IN_GENRE", "relId": "n180", "props": {} },
+  { "from": "n8", "to": "n62", "type": "IN_GENRE", "relId": "n181", "props": {} },
+  { "from": "n10", "to": "n62", "type": "IN_GENRE", "relId": "n182", "props": {} },
+  { "from": "n10", "to": "n57", "type": "IN_GENRE", "relId": "n183", "props": {} },
+  { "from": "n14", "to": "n5", "type": "IN_GENRE", "relId": "n184", "props": {} },
+  { "from": "n14", "to": "n57", "type": "IN_GENRE", "relId": "n185", "props": {} },
+  { "from": "n14", "to": "n62", "type": "IN_GENRE", "relId": "n186", "props": {} },
+  { "from": "n2", "to": "n58", "type": "IN_GENRE", "relId": "n187", "props": {} },
+  { "from": "n2", "to": "n63", "type": "IN_GENRE", "relId": "n188", "props": {} },
+  { "from": "n12", "to": "n5", "type": "IN_GENRE", "relId": "n189", "props": {} },
+  { "from": "n12", "to": "n58", "type": "IN_GENRE", "relId": "n190", "props": {} },
+  { "from": "n12", "to": "n63", "type": "IN_GENRE", "relId": "n191", "props": {} },
+  { "from": "n11", "to": "n64", "type": "IN_GENRE", "relId": "n192", "props": {} },
+  { "from": "n49", "to": "n60", "type": "IN_GENRE", "relId": "n193", "props": {"Based on true story": ""} },
+  { "from": "n15", "to": "n58", "type": "IN_GENRE", "relId": "n194", "props": {} }
+]
+
+CREATE (:Actor {id: 'n0', caption: 'Hugo Weaving'});
+CREATE (:User {id: 'n1', caption: 'Luan'});
+CREATE (:Movie {id: 'n2', caption: 'Forrest Gump'});
+CREATE (:Series {id: 'n3', caption: 'Afterlife'});
+CREATE (:Director {id: 'n4', caption: 'David Fincher'});
+CREATE (:Genre {id: 'n5', caption: 'Action'});
+CREATE (:Movie {id: 'n6', caption: 'The Matrix'});
+CREATE (:Movie {id: 'n7', caption: 'Lord of the Rings: Fellowship of the Ring'});
+CREATE (:Movie {id: 'n8', caption: 'Harry Potter and the Goblet of Fire'});
+CREATE (:Movie {id: 'n9', caption: 'Police Story 2'});
+CREATE (:Movie {id: 'n10', caption: 'Shrek'});
+CREATE (:Movie {id: 'n11', caption: 'Pulp Fiction'});
+CREATE (:Movie {id: 'n12', caption: 'Django Unchained'});
+CREATE (:Movie {id: 'n13', caption: 'Rango'});
+CREATE (:Movie {id: 'n14', caption: 'Pirates of the Caribbean'});
+CREATE (:Movie {id: 'n15', caption: 'El Camino'});
+CREATE (:Actor {id: 'n16', caption: 'Johnny Depp'});
+CREATE (:Actor {id: 'n17', caption: 'Jensen Ackles'});
+CREATE (:Actor {id: 'n18', caption: 'Jackie Chan'});
+CREATE (:Actor {id: 'n19', caption: 'Bryan Cranston'});
+CREATE (:Actor {id: 'n20', caption: 'Bob Odenkirk'});
+CREATE (:Actor {id: 'n21', caption: 'Jared Padalecki'});
+CREATE (:Actor {id: 'n22', caption: 'Rhea Seehorn'});
+CREATE (:Actor {id: 'n23', caption: 'Steve Carell'});
+CREATE (:Actor {id: 'n24', caption: 'Brendan Gleeson'});
+CREATE (:Actor {id: 'n25', caption: 'Eddie Murphy'});
+CREATE (:Actor {id: 'n26', caption: 'Gary Sinise'});
+CREATE (:Actor {id: 'n27', caption: 'Sam Eliott'});
+CREATE (:Actor {id: 'n28', caption: 'Kevin Costner'});
+CREATE (:Actor {id: 'n29', caption: 'Jonathan Groff'});
+CREATE (:Actor {id: 'n30', caption: 'Samuel L. Jackson'});
+CREATE (:User {id: 'n31', caption: 'Sam'});
+CREATE (:User {id: 'n32', caption: 'Alex'});
+CREATE (:User {id: 'n33', caption: 'Aaron'});
+CREATE (:User {id: 'n34', caption: 'Mark'});
+CREATE (:User {id: 'n35', caption: 'Alan'});
+CREATE (:User {id: 'n36', caption: 'Matt'});
+CREATE (:User {id: 'n37', caption: 'Doug'});
+CREATE (:User {id: 'n38', caption: 'Leon'});
+CREATE (:Director {id: 'n39', caption: 'Ricky Gervais'});
+CREATE (:Director {id: 'n40', caption: 'Gore Verbinski'});
+CREATE (:Director {id: 'n41', caption: 'Jackie Chan'});
+CREATE (:Director {id: 'n42', caption: 'Eric Kripke'});
+CREATE (:Director {id: 'n43', caption: 'Vince Gilligan'});
+CREATE (:Director {id: 'n44', caption: 'Peter Jackson'});
+CREATE (:Director {id: 'n45', caption: 'Robert Zemeckis'});
+CREATE (:Director {id: 'n46', caption: 'Quentin Tarantino'});
+CREATE (:Director {id: 'n47', caption: 'The Wachowskis'});
+CREATE (:Series {id: 'n48', caption: 'The Office'});
+CREATE (:Series {id: 'n49', caption: 'Mindhunter'});
+CREATE (:Series {id: 'n50', caption: '1883'});
+CREATE (:Series {id: 'n51', caption: 'Yellowstone'});
+CREATE (:Series {id: 'n52', caption: 'The Boys'});
+CREATE (:Series {id: 'n53', caption: 'Supernatural'});
+CREATE (:Series {id: 'n54', caption: 'Better Call Saul'});
+CREATE (:Series {id: 'n55', caption: 'Breaking Bad'});
+CREATE (:Series {id: 'n56', caption: 'Pluribus'});
+CREATE (:Genre {id: 'n57', caption: 'Comedy'});
+CREATE (:Genre {id: 'n58', caption: 'Drama'});
+CREATE (:Genre {id: 'n59', caption: 'Sci-Fi'});
+CREATE (:Genre {id: 'n60', caption: 'Documentary'});
+CREATE (:Genre {id: 'n61', caption: 'Horror'});
+CREATE (:Genre {id: 'n62', caption: 'Fantasy'});
+CREATE (:Genre {id: 'n63', caption: 'Romance'});
+CREATE (:Genre {id: 'n64', caption: 'Thriller'});
+CREATE (:Genre {id: 'n65', caption: 'Mystery'});
+CREATE (:Director {id: 'n66', caption: 'Taylor Sheridan'});
